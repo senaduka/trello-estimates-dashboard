@@ -158,7 +158,7 @@
   $('#boards').change(changedBoard);
 
   Trello.authorize({
-    type: "popup",
+    type: "redirect",
     name: "Trello Estimates",
     scope: {
       read: true,
