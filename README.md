@@ -6,9 +6,11 @@ Estimates are written somwhere inside Description field in the form of:
 
  Estimates are summed by label and by list and total number of hours is colorfully written in front of the label  list name.
  `?` instead of number of hours marks those labels that don't have any cards with estimates entered.
- 
 
-Code as taken from:
+ You can use it here:
+ https://dl.dropboxusercontent.com/u/11716687/web/trello-estimates/index.html#
+
+Code was taken from:
 http://blog.getcorrello.com/2015/10/14/build-your-own-dashboard-on-the-trello-api/
 and modified.
 (Thanks for the nice blog post!)
