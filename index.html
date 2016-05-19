@@ -102,21 +102,32 @@
     return hours;
   }
 
+  var printOutValues = function() {
+    $.each(values.labels, function(labelId, value) {
+      $("#label_" + labelId).html("" + value + "h");
+    });
+
+    $.each(values.lists, function(listId, value) {
+      $("#list_" + listId).html("" + value + "h");
+    });
+
+  };
+
+
 
   var loadedCards = function(cards) {
     if (!cards) return;
-
     $.each(cards, function(index, card) {
       var hours = getHours(card.desc);
       values.lists[card.idList] += hours;
-      $("#list_" + card.idList).html("" + values.lists[card.idList] + "h");
+
       if (!card.idLabels) return true;
       $.each(card.idLabels, function(_index, labelId) {
-
         values.labels[labelId] += hours;
-        $("#label_" + labelId).html("" + values.labels[labelId] + "h");
       });
     });
+
+    printOutValues();
   };
 
 
